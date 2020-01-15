@@ -1,0 +1,49 @@
+body {
+  background-image: url("../images/vintage-concrete.png");
+  background-repeat: fixed;
+  min-height: calc(100vh - 70px);
+}
+
+button,
+    div,
+    form,
+    input {
+  margin: 10px;
+    }
+
+#gifs-appear-here {
+  margin: 10px;
+  display: inline-block;
+}
+
+#pics, img {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  padding: 5px;
+ }
+
+button {
+  width:150px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: papayawhip;
+  font-size: 24px;
+  font-style: italic;
+  border: 2px solid blue;
+}
+
+h1 {
+  font-size: 60px;
+  color: purple;
+}
+
+#add-cat {
+  width:150px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: papayawhip;
+  font-size: 20px;
+  font-style: italic;
+  border: 2px solid blue;
+}
