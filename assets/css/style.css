@@ -1,8 +1,11 @@
 body {
-  background-image: url("../images/vintage-concrete.png");
-  background-repeat: fixed;
-  min-height: calc(100vh - 70px);
-}
+   min-height: calc(100vh - 70px);
+   background: url("../images/cool-wallpapers-15.jpg") no-repeat center center fixed; 
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+  }
 
 button,
     div,
@@ -11,15 +14,12 @@ button,
   margin: 10px;
     }
 
-#gifs-appear-here {
-  margin: 10px;
-}
-
 img {
   width: 200px;
   height: 200px;
-  padding: 5px;
+  padding: 0px;
   border-radius: 15px;
+  border: 3px solid black;
   }
 
 button {
@@ -33,10 +33,10 @@ button {
 }
 
 h1 {
-  font-size: 72px;
+  font-size: 90px;
   padding: 12px;
   font-weight: bolder;
-  background: -webkit-linear-gradient(pink, purple);
+  background: -webkit-linear-gradient(yellow, orange);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text; 
 }
@@ -72,7 +72,23 @@ button:hover {
 }
 
 h1:hover {
-  background: -webkit-linear-gradient(rgb(255, 238, 0), blue);
+  background: -webkit-linear-gradient(purple,white);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text; 
+}
+
+label {
+  color: yellow;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bolder;
+}
+
+input {
+  height: 30px;
+  font-size: 30px;
+}
+
+label:hover {
+  color: white;
 }
