@@ -92,3 +92,7 @@ input {
 label:hover {
   color: white;
 }
+
+p {
+  color: yellowgreen;
+}
