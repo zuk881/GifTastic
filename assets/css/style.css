@@ -15,12 +15,12 @@ button,
   margin: 10px;
 }
 
-#pics, img {
+img {
   width: 200px;
   height: 200px;
   padding: 5px;
   border-radius: 15px;
- }
+  }
 
 button {
   width:150px;
@@ -75,3 +75,4 @@ h1:hover {
   background: -webkit-linear-gradient(rgb(255, 238, 0), blue);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text; 
+}

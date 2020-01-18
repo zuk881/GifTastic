@@ -1,12 +1,12 @@
 
 // array to hold data values, button text, and search parameters
-var giphy = ["silly cat", "happy cat", "scared cat", "tired cat"];
+var giphy = ["silly cat", "happy cat", "grumpy cat", "tired cat"];
 
-// function used to get data from giphy.com and display the gifs
-function displayGif() {
-  
+// function used to get data from giphy.com
+function gifApi() {
+
   // call to remove previous gifs before adding new ones
-  $("#gifs-appear-here").empty();
+  $("#pics").empty();
 
   // variable to hold the data of button pushed that is then added to search
   var catType = $(this).attr("data-name");
@@ -18,43 +18,36 @@ function displayGif() {
   $.ajax({
     url: queryURL,
     method: "GET"
-  }).then(function (response) {
+  }).then(function (x) {
 
-    // for loop used to disply all results from query  
-    for (var i = 0; i < 10; i++) {
+    displayGif(x.data);
 
-      // variables needed to hold values
-      var gifDiv = $("<div>");
-      var results = response.data;
-      var rating = results[i].rating;
-      var p = $("<p>").text("Rating: " + rating);
-      var catImage = $("<img>");
-
-      // adding attributes needed for still/animate function and adding images and ratings to gifDiv and then displaying them when called    
-      catImage.attr("src", results[i].images.fixed_height.url);
-      catImage.attr("data-still", results[i].images.fixed_height_still.url);
-      catImage.attr("data-animate", results[i].images.fixed_height.url);
-      catImage.addClass("gif")
-      gifDiv.prepend(p);
-      gifDiv.prepend(catImage);
-      $("#gifs-appear-here").prepend(gifDiv);
-
-      // click on gif listener to change data-state from active to still and reverse    
-      $(".gif").on("click", function () {
-        var state = $(this).attr("data-state");
-        if (state === "still") {
-          $(this).attr("src", $(this).attr("data-animate"));
-          $(this).attr("data-state", "animate");
-        } else {
-          $(this).attr("src", $(this).attr("data-still"));
-          $(this).attr("data-state", "still");
-        }
-      });
-
-    }
   });
 }
 
+// function to display results from ajax call
+function displayGif(results) {
+  
+  // for loop used to disply all results from ajax call  
+  for (var i = 0; i < 10; i++) {
+
+    // variables needed to hold values
+    var gifDiv = $("<div>");
+    var rating = results[i].rating;
+    var p = $("<p>").text("Rating: " + rating);
+    var catImage = $("<img>");
+
+    // adding attributes needed for still/animate function and adding images and ratings to gifDiv and then displaying them when called    
+    catImage.attr("src", results[i].images.fixed_height.url);
+    catImage.attr("data-still", results[i].images.fixed_height_still.url);
+    catImage.attr("data-animate", results[i].images.fixed_height.url);
+    catImage.addClass("gif")
+    gifDiv.addClass("col-sm-2");
+    gifDiv.append(p);
+    gifDiv.prepend(catImage);
+    $("#pics").append(gifDiv);
+  }
+}
 // function to loop through the array and display buttons
 function renderButtons() {
   $("#buttons-view").empty();
@@ -77,10 +70,20 @@ $("#add-cat").on("click", function (event) {
 });
 
 // button event listener to display 10 gifs 
-$(document).on("click", ".gif-button", displayGif);
+$(document).on("click", ".gif-button", gifApi);
 
 // function call to display initial buttons  
 renderButtons();
 
-
+// click on gif listener to change data-state from active to still and reverse    
+$(document).on("click", ".gif", function () {
+  var state = $(this).attr("data-state");
+  if (state === "still") {
+    $(this).attr("src", $(this).attr("data-animate"));
+    $(this).attr("data-state", "animate");
+  } else {
+    $(this).attr("src", $(this).attr("data-still"));
+    $(this).attr("data-state", "still");
+  }
+});
 
