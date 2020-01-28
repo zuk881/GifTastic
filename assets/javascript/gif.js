@@ -1,4 +1,4 @@
-
+$(document).ready(function () {
 // array to hold data values, button text, and search parameters
 var giphy = ["silly cat", "happy cat", "grumpy cat", "tired cat"];
 
@@ -86,4 +86,4 @@ $(document).on("click", ".gif", function () {
     $(this).attr("data-state", "still");
   }
 });
-
+});
