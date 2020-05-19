@@ -4,7 +4,7 @@
 [Try it here!](https://zuk881.github.io/GifTastic/
 )
 
-![catGif](url)
+![catGif](https://imgur.com/Dr4YG30)
 
 ### Using
 Click on one of the buttons at the top of the page to fill with funny cat gifs! Or create your own buttons with the add a button feature.
