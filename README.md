@@ -6,21 +6,21 @@
 
 ![catGif](url)
 
-## Using
+### Using
 Click on one of the buttons at the top of the page to fill with funny cat gifs! Or create your own buttons with the add a button feature.
 The user can also click on any gif to turn the motion on and off.
 
-## Installing
+### Installing
 To run the application locally, you will need to clone the repository to your local machine.
-### HTTPS:
-#### https://github.com/zuk881/GifTastic.git
-### SSH:
-#### git@github.com:zuk881/GifTastic.git
+#### HTTPS:
+##### https://github.com/zuk881/GifTastic.git
+#### SSH:
+##### git@github.com:zuk881/GifTastic.git
 
-## Technology Used
-### JavaScript, AJAX, Bootstrap, JQuery
+#### Technology Used
+#### JavaScript, AJAX, Bootstrap, JQuery
 
-## Authors
+### Authors
 * Richard https://github.com/zuk881
 
 
