@@ -18,7 +18,7 @@ To run the application locally, you will need to clone the repository to your lo
 #### git@github.com:zuk881/GifTastic.git
 
 ## Technology Used
-JavaScript, AJAX, Bootstrap, JQuery
+### JavaScript, AJAX, Bootstrap, JQuery
 
 Authors
 * Richard https://github.com/zuk881
