@@ -20,7 +20,7 @@ To run the application locally, you will need to clone the repository to your lo
 ## Technology Used
 ### JavaScript, AJAX, Bootstrap, JQuery
 
-Authors
+## Authors
 * Richard https://github.com/zuk881
 
 
