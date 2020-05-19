@@ -1,8 +1,6 @@
 # GifTastic
 
 ### Application that uses the Giphy API to make a dynamic web page that populates the page with cat gifs.
-
-##
 [Try it here!](https://zuk881.github.io/GifTastic/
 )
 
